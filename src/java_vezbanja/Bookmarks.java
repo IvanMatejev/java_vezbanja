@@ -1,5 +1,8 @@
 package java_vezbanja;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Bookmarks {
 
 	public static void main(String[] args) {
@@ -21,19 +24,33 @@ public class Bookmarks {
 //		Apps     YouTube     Google     Gmail     Miro | Online Whiteboard for Visual Collaboration     Confluence     JIRA     Bitbucket    
 //		Google Calendar     Timesheet     Google Drive     IX CIKLUS       
 //		Niz koriscen za ovaj demo je
-//		        ArrayList<String> bookmarks = new ArrayList<>();
-//		        bookmarks.add("Apps");
-//		        bookmarks.add("YouTube");
-//		        bookmarks.add("Google");
-//		        bookmarks.add("Gmail");
-//		        bookmarks.add("Miro | Online Whiteboard for Visual Collaboration");
-//		        bookmarks.add("Confluence");
-//		        bookmarks.add("JIRA");
-//		        bookmarks.add("Bitbucket");
-//		        bookmarks.add("Google Calendar");
-//		        bookmarks.add("Timesheet");
-//		        bookmarks.add("Google Drive");
-//		        bookmarks.add("IX CIKLUS");
+		        ArrayList<String> bookmarks = new ArrayList<String>();
+		        Scanner s = new Scanner(System.in);
+		        bookmarks.add("Apps");
+		        bookmarks.add("YouTube");
+		        bookmarks.add("Google");
+		        bookmarks.add("Gmail");
+		        bookmarks.add("Miro | Online Whiteboard for Visual Collaboration");
+		        bookmarks.add("Confluence");
+		        bookmarks.add("JIRA");
+		        bookmarks.add("Bitbucket");
+		        bookmarks.add("Google Calendar");
+		        bookmarks.add("Timesheet");
+		        bookmarks.add("Google Drive");
+		        bookmarks.add("IX CIKLUS");
+		        int count = 0 ;
+		        System.out.println("Unesite sirinu pretrazivaca: ");
+		        int sirinaPretrazivaca = s.nextInt();
+		        for( int i = 0 ; i < bookmarks.size(); i++ ) {
+		        	String bookmark = bookmarks.get(i);
+		        	count += bookmark.length();
+		        	count += 5;
+		        	if ( count <= sirinaPretrazivaca ) {
+		        		System.out.print( bookmarks.get(i) + "     ");
+		        	}
+		        	
+		        }
+		        
 
 	}
 
